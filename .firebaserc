@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lab4-de93f": {
+      "hosting": {
+        "Sala-De-Juegos": [
+          "saladejuegos-zorzano"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lab4-de93f"
+  }
+}
