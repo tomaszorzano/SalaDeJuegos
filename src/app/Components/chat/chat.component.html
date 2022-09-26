@@ -1,0 +1,45 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <h3>SALA DE CHAT</h3>
+        </div>
+        <div class="col">
+            <div *ngFor="let mensaje of msjs">
+                <div *ngIf="!mensaje.usrActual">
+                    <div class="row mt-3 container" >
+                        <div class="col-3">
+                            <p><strong>{{mensaje.email}}</strong></p>
+                        </div>
+                        <div class="col-9 d-flex align-self-center">
+                            <div class="alert alert-warning alert-left w-100">
+                                <p>{{mensaje.mensaje}}</p>
+                                <span class="time-left">{{mensaje.fecha}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div *ngIf="mensaje.usrActual">
+                    <div class="row mt-3 container darker">
+                        <div class="col-9 d-flex align-self-center">
+                            <div class="alert alert-success alert-right w-100 text-right">
+                                <p>{{mensaje.mensaje}}</p>
+                                <span class="time-right">{{mensaje.fecha}}</span>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <p><strong>{{mensaje.email}}</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br />
+            <div class="row">
+                <div class="col-6">
+                    <textarea [(ngModel)]="msjUsuario" rows="3" style="width: 100%" class="form-control" placeholder="Escriba aqui...">
+                        </textarea>
+                </div>
+            </div>
+            <input type="button" (click)="enviarMensaje()" value="Enviar"/>
+        
+    </div>
+</div>

@@ -2,6 +2,7 @@ export const environment = {
   firebase: {
     projectId: 'lab4-de93f',
     appId: '1:50313824126:web:4993e538d289338e9f552f',
+    databaseURL: 'https://lab4-de93f-default-rtdb.firebaseio.com',
     storageBucket: 'lab4-de93f.appspot.com',
     locationId: 'us-central',
     apiKey: 'AIzaSyDZ5lNMaDjovPk1X-W2zUeUsaUexXiYKfo',

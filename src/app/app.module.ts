@@ -14,6 +14,9 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AngularFireDatabaseModule } from "@angular/fire/compat/database";
 import { FIREBASE_OPTIONS } from '@angular/fire/compat';
 import { RegisterComponent } from './Components/register/register.component';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { ChatComponent } from './Components/chat/chat.component';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import { RegisterComponent } from './Components/register/register.component';
     LoginComponent,
     QuienSoyComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    NavbarComponent,
+    ChatComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,7 @@ import { RegisterComponent } from './Components/register/register.component';
     provideFirestore(() => getFirestore()),
     ReactiveFormsModule,
     AngularFireDatabaseModule,
+    provideDatabase(() => getDatabase()),
 
   ],
   providers: [{ provide: FIREBASE_OPTIONS, useValue: environment.firebase} ],
