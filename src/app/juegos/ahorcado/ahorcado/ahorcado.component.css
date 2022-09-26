@@ -1,0 +1,38 @@
+#general{
+    background-image: url('../../../../assets/ahorcado/fondoAhorcado.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+
+#horca{
+    height: 400px;
+    width: 500px;
+    display:block;
+    margin:auto;
+    
+    /*background-image: url('../../../assets/ahorcado/ahorcado.jpg');*/
+}
+
+
+
+#mensaje{
+    text-align: center;
+}
+
+#titulo{
+    text-align: center;
+}
+
+#empezar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#palabraEnGuiones{
+    text-align: center;
+    font-size: 500%;
+    background-color: white;
+}

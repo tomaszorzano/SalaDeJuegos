@@ -18,6 +18,7 @@ import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ChatComponent } from './Components/chat/chat.component';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
     HomeComponent,
     RegisterComponent,
     NavbarComponent,
-    ChatComponent
+    ChatComponent,
+
   ],
   imports: [
     BrowserModule,

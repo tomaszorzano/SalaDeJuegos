@@ -1,0 +1,56 @@
+<div class="container-fluid" id="general"> 
+    <div class="col-12 p-2">
+      <h1 id="titulo" style="color:white" ><strong>AHORCADO</strong></h1>
+    </div>
+    <div class="row">
+      <div class="col-6">
+        <div id="ahorcado" class=" p-2">
+          <img id="horca" src="../../../assets/ahorcado/ahorcado.jpg">
+        </div>
+        <div id="empezar" *ngIf="!empezado">
+          <div id="empezar" *ngIf="!palabraCompletada || juegoCompletado">
+            <button class="btn btn-lg btn-light " (click)="empezar()"><strong>EMPEZAR</strong></button>
+          </div>
+          <div id="empezar" *ngIf="palabraCompletada">
+            <button class="btn btn-lg btn-light " (click)="empezar()"><strong>SIGUIENTE PALABRA</strong></button>
+          </div>
+        </div>
+      </div>
+      <div class="col-6">
+      <div class="form-group" id="mensaje" *ngIf="resultado">
+          <h1><strong>{{mensaje}}</strong></h1>
+      </div>
+        <h1 class="my-0 font-weight-normal" id="palabraEnGuiones">{{palabraEnGuiones}}</h1>
+        
+      </div>
+      <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center" *ngIf="empezado">
+        <h3 style="color:white" >Introduce una letra</h3>
+        <div class="row">
+          <div  class="col-sm-2"  *ngFor="let letra of arrayLetras">
+              <input type="button" class="btn btn-light col-sm-4 text-center pt-2" (click)="onLetra(letra.nombre)" value="{{letra.nombre}}">
+            </div>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12" *ngIf="resultado">
+        <h1 class="text-center">Puntos: {{puntosAux}}</h1> 
+
+        <br>
+        <hr>
+        <label>Mejores Puntajes</label>
+        <div *ngFor="let puntaje of listaOrdenada">
+          <div class="row">
+            <div class="col-6">
+              <h4>{{puntaje.usuario}}</h4>
+            </div>
+            <div class="col-6">
+              <h4>{{puntaje.puntos}}</h4>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
