@@ -1,1 +1,46 @@
-<p>mayormenor works!</p>
+<div class="card mb-4 box-shadow" id="general">
+  <div class="card-header">
+    <h1 class="my-0 font-weight-normal text-center" style="color: white;"><strong>MAYOR Y MENOR</strong></h1>
+    <img id="imgEmp" src="../../../assets/mayormenor/Ace of Clubs.png" *ngIf="!empezado">
+  </div>
+  <div class="card-body col-sm-1 align-self-center">
+    <button type="button" class="btn btn-lg btn-block btn-primary" id="empezar" [hidden]="empezado" (click)='empezar()'
+      style="color: white;">Empezar</button>
+
+  </div>
+
+  <div class="col-12" *ngIf="resultado">
+    <h1 class="text-center" style="color: white;">{{mensaje}}</h1>
+  </div>
+  <div class="col-12" *ngIf="resultado">
+    <h1 class="text-center" style="color: white;" >Puntos: {{puntosAux}}</h1>
+    <br>
+    <hr>
+    <label style="color: white;">Mejores Puntajes</label>
+    <div *ngFor="let puntaje of listaOrdenada">
+      <div class="row">
+        <div class="col-4">
+          <h4 style="color: white;">{{puntaje.usuario}}</h4>
+        </div>
+        <div class="col-4">
+          <h4 style="color: white;">{{puntaje.puntos}}</h4>
+        </div>
+      </div>
+    </div>
+  </div>
+  <br>
+  <hr>
+  <div class="container">
+    <label style="color: white;" >Mejores Puntajes</label>
+    <div class="card-body col-sm-6 text-center" *ngIf="empezado">
+      <br>
+      <div class="col-12 text-center">
+        <h1 style="color: white;" >Puntos:</h1>
+        <h1 style="color: white;">{{puntos}}</h1>
+      </div>
+      <br>
+      <img id="carta" [src]="carta.src">
+      <button type="button" class="btn btn-lg btn-block btn-light" (click)='cartaMayor()'>Mayor</button>
+      <button type="button" class="btn btn-lg btn-block btn-light" (click)='cartaMenor()'>Menor</button>
+    </div>
+  </div>

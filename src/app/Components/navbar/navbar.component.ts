@@ -13,10 +13,17 @@ export class NavbarComponent implements OnInit {
   email!: string;
   public usuario$: Observable<any> = this.authSvc.afAuth.user;
   msjError!: string;
-  constructor(public router: Router,public authSvc: AuthService) { }
+  constructor(public router: Router,public authSvc: AuthService) { 
+
+    setTimeout(()=>{
+      this.onLogout();
+    },100000);
+
+  }
 
   ngOnInit(): void 
   {
+
   }
 
   async onLogout() {
@@ -36,5 +43,9 @@ export class NavbarComponent implements OnInit {
   goRegistro(){
     this.router.navigate(['Register']);
   }
+  goHome(){
+    this.router.navigate(['Home']);
+  }
+
 
 }

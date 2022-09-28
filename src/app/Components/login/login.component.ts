@@ -15,7 +15,10 @@ export class LoginComponent implements OnInit {
   usuario: Usuario = new Usuario();
   msjError!: string;
 
-  constructor(public router: Router,public authSvc: AuthService) { }
+  constructor(public router: Router,public authSvc: AuthService) {
+
+
+   }
 
   ngOnInit(): void {
   }

@@ -1,0 +1,21 @@
+
+#general{
+    background-image: url('../../../../assets/ahorcado/fondoAhorcado.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+#carta{
+    height: 400px;
+    width: 300px;
+    display:block;
+    margin:auto;
+}
+
+#imgEmp{
+    height: 400px;
+    width: 300px;
+    display:block;
+    margin:auto;
+}
