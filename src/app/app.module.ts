@@ -17,6 +17,7 @@ import { RegisterComponent } from './Components/register/register.component';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { ChatComponent } from './Components/chat/chat.component';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { EncuestaComponent } from './Components/encuesta/encuesta.component';
 
 
 @NgModule({
@@ -28,6 +29,7 @@ import { provideDatabase,getDatabase } from '@angular/fire/database';
     RegisterComponent,
     NavbarComponent,
     ChatComponent,
+    EncuestaComponent,
 
   ],
   imports: [
