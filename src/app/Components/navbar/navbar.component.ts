@@ -17,7 +17,7 @@ export class NavbarComponent implements OnInit {
 
     setTimeout(()=>{
       this.onLogout();
-    },100000);
+    },1000000);
 
   }
 

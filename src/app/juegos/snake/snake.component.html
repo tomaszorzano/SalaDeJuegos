@@ -1,0 +1,62 @@
+<div class="container">
+    <p></p>
+    <p></p>
+    <h1>Juego SNAKE</h1>
+    <p></p>
+    <p></p>
+  
+  
+    <div class="container2" style="background-color: #282846" >
+      <div class="container2" >
+        <div class="score-card">
+          <div class="restart-button" >
+   
+          </div>
+        </div>
+        <div class="game-over" *ngIf="gameOver">
+          <h1>Game Over</h1>
+        </div>
+  
+        <div class="game-board">
+        </div>
+        <div class="mobile-controls">
+          <h2>Pad para el teléfono</h2>
+          <nav class="o-pad">
+            <a class="up" (click)="dpadMovement('ArrowUp')"></a>
+            <a class="right" (click)="dpadMovement('ArrowRight')"></a>
+            <a class="down" (click)="dpadMovement('ArrowDown')"></a>
+            <a class="left" (click)="dpadMovement('ArrowLeft')"></a>
+          </nav>
+        </div>
+  
+      </div>
+  
+  
+    </div>
+  
+  
+  
+  
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-12" >
+        <h1 class="text-center">Puntos: {{puntosAux}}</h1> 
+
+        <br>
+        <hr>
+        <label>Mejores Puntajes</label>
+        <div *ngFor="let puntaje of listaOrdenada">
+          <div class="row">
+            <div class="col-6">
+              <h4>{{puntaje.usuario}}</h4>
+            </div>
+            <div class="col-6">
+              <h4>{{puntaje.puntos}}</h4>  
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

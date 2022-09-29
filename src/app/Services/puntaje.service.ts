@@ -13,11 +13,11 @@ export class PuntajeService {
   dbPathMM: string =  'puntajesMayorMenor';
   dbPathPgts: string =  'puntajesPreguntados';
   dbPathAhdo: string =  'puntajesAhorcado';
-  dbPathFchs: string =  'puntajesFlechas';
+  dbPathSnake: string =  'puntajesSnake';
   puntajesCollectionMM!: AngularFirestoreCollection<Puntos>;
   puntajesCollectionPgts!: AngularFirestoreCollection<Puntos>;
   puntajesCollectionAhdo!: AngularFirestoreCollection<Puntos>;
-  puntajesCollectionFchs!: AngularFirestoreCollection<Puntos>;
+  puntajesCollectionSnake!: AngularFirestoreCollection<Puntos>;
   puntajes!: Observable<Puntos[]>;
 
   constructor(public db: AngularFirestore, public router: Router, public afAuth: AngularFireAuth) {
@@ -50,12 +50,12 @@ export class PuntajeService {
     }, 1000);
    }
 
-   cargarPuntajesFchs(){
+   cargarPuntajesSnake(){
     //setTimeout(() => {
-      this.puntajesCollectionFchs = this.db.collection<Puntos>(this.dbPathFchs, ref => ref.orderBy('puntos','desc'));
+      this.puntajesCollectionSnake = this.db.collection<Puntos>(this.dbPathSnake, ref => ref.orderBy('puntos','desc'));
     //}, 100);
     setTimeout(() => {
-      this.getPuntajes(this.puntajesCollectionFchs);
+      this.getPuntajes(this.puntajesCollectionSnake);
     }, 1000);
    }
 
